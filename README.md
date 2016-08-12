@@ -19,3 +19,10 @@ http://www.axonframework.org/docs/2.4/command-handling.html#d5e727
 
     $ mvn package docker:build
     $ docker-compose up
+
+You should see a few things:
+
+- Two containers will be started
+- They will form a JGroups cluster
+- The first container will send 100 commands to Axon
+- Axon will distribute the commands evenly over both containers
