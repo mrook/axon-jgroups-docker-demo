@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+  axon1:
+    image: axon-jgroups-demo
+    ports:
+      - 7800
+    networks:
+      app_net:
+        ipv4_address: 172.16.238.10
+    environment:
+      PRIMARY: "yes"
+  axon2:
+    image: axon-jgroups-demo
+    ports:
+      - 7800
+    networks:
+      app_net:
+        ipv4_address: 172.16.238.20
+    environment:
+      PRIMARY: "no"
+
+networks:
+  app_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.238.0/24
+        gateway: 172.16.238.1
