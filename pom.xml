@@ -74,12 +74,12 @@
         <dependency>
             <groupId>org.axonframework</groupId>
             <artifactId>axon-core</artifactId>
-            <version>3.0-M3</version>
+            <version>3.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.axonframework</groupId>
-            <artifactId>axon-distributed-commandbus</artifactId>
-            <version>3.0-M3</version>
+            <artifactId>axon-distributed-commandbus-jgroups</artifactId>
+            <version>3.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.jgroups</groupId>

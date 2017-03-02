@@ -4,7 +4,6 @@ import org.axonframework.commandhandling.SimpleCommandBus;
 import org.axonframework.commandhandling.distributed.AnnotationRoutingStrategy;
 import org.axonframework.commandhandling.distributed.DistributedCommandBus;
 import org.axonframework.commandhandling.distributed.commandfilter.AcceptAll;
-import org.axonframework.commandhandling.distributed.jgroups.JGroupsConnector;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.commandhandling.gateway.DefaultCommandGateway;
 import org.axonframework.commandhandling.model.Repository;
@@ -15,6 +14,7 @@ import org.axonframework.eventsourcing.EventSourcingRepository;
 import org.axonframework.eventsourcing.eventstore.EmbeddedEventStore;
 import org.axonframework.eventsourcing.eventstore.EventStore;
 import org.axonframework.eventsourcing.eventstore.inmemory.InMemoryEventStorageEngine;
+import org.axonframework.jgroups.commandhandling.JGroupsConnector;
 import org.axonframework.serialization.xml.XStreamSerializer;
 import org.jgroups.JChannel;
 
