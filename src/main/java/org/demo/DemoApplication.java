@@ -1,3 +1,5 @@
+package org.demo;
+
 import org.axonframework.commandhandling.AggregateAnnotationCommandHandler;
 import org.axonframework.commandhandling.CommandBus;
 import org.axonframework.commandhandling.SimpleCommandBus;
@@ -20,12 +22,12 @@ import org.jgroups.JChannel;
 
 import java.util.Random;
 
-public class Demo {
+public class DemoApplication {
     private JGroupsConnector connector;
 
     public static void main(String[] args) throws Exception {
-        Demo demo = new Demo();
-        demo.run();
+        DemoApplication demoApplication = new DemoApplication();
+        demoApplication.run();
         System.exit(0);
     }
 

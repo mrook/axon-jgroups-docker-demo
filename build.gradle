@@ -25,7 +25,7 @@ repositories {
 
 jar {
     manifest {
-        attributes "Main-Class": "Demo"
+        attributes "Main-Class": "org.demo.DemoApplication"
     }
 
     from {
