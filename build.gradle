@@ -1,0 +1,39 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'org.axonframework'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "Demo"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    compile group: 'org.axonframework', name: 'axon-core', version:'3.0.6'
+    compile group: 'org.axonframework', name: 'axon-distributed-commandbus-jgroups', version:'3.0.6'
+    compile group: 'org.jgroups', name: 'jgroups', version:'3.6.10.Final'
+    compile group: 'org.slf4j', name: 'jul-to-slf4j', version:'1.7.5'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version:'1.7.5'
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version:'1.7.5'
+    compile(group: 'log4j', name: 'log4j', version:'1.2.17') {
+exclude(module: 'jmxtools')
+exclude(module: 'jmxri')
+exclude(module: 'mail')
+exclude(module: 'jms')
+    }
+}
