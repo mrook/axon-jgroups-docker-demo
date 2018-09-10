@@ -1,11 +1,11 @@
 Axon Framework, JGroups and Docker
 ==================================
 
-This is a simple project to demonstrate how to get Axon Framework (3.x) and
-JGroups working together in a Docker environment.
+This is a simple project to demonstrate how to get Axon Framework (3.3) and
+JGroups (4) working together in a Docker environment.
 
 For more information about the JGroups integration in Axon, see
-https://docs.axonframework.org/v/3.0/part3/command-dispatching.html
+https://docs.axonframework.org/v/3.0/part-iii-infrastructure-components/command-dispatching
 
 
 ## Prerequisites
@@ -14,7 +14,7 @@ https://docs.axonframework.org/v/3.0/part3/command-dispatching.html
 
 ## Running
 
-    $ mvn package docker:build
+    $ docker build -t axon-jgroups-demo .
     $ docker-compose up
 
 You should see a few things:
